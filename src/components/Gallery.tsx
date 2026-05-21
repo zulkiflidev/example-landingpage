@@ -7,12 +7,14 @@ function Gallery() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    // Kak, section Gallery ini kita kasih bg-gray-50 buat terang, dan dark:bg-zinc-900 buat gelap biar selaras sama Menu Highlight!
+    <section className="py-16 bg-gray-50 dark:bg-zinc-900 transition-colors duration-300">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Gallery</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-zinc-100 transition-colors duration-300">Our Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((src, index) => (
-            <div key={index} className="overflow-hidden rounded-lg">
+            // Kita bungkus gambarnya pake border tipis dark:border-zinc-800 biar pas gelap kelihatan rapi dan premium!
+            <div key={index} className="overflow-hidden rounded-lg border border-transparent dark:border-zinc-850 shadow-sm dark:shadow-zinc-950/20 transition-all duration-300">
               <img 
                 src={src} 
                 alt={`Gallery image ${index + 1}`} 
@@ -27,3 +29,4 @@ function Gallery() {
 }
 
 export default Gallery
+

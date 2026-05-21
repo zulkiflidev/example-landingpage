@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+/* 
+  Kak, ini custom variant buat Tailwind v4 biar dia ngenalin 
+  class '.dark' di root HTML kita sebagai tanda dark mode aktif!
+  Aku dapet info ini dari dokumentasi resmi Tailwind CSS v4 terbaru.
+*/
+@custom-variant dark (&:is(.dark *));
